@@ -12,6 +12,7 @@ test_set="test"
 av_hubert_model="large" #select large or base
 
 ./asr.sh \
+    --skip-stages 3
     --lang en \
     --train_set ${train_set} \
     --valid_set ${valid_set} \

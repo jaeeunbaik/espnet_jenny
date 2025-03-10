@@ -80,7 +80,7 @@ ngram_num=3
 # Language model related
 use_lm=true       # Use language model for ASR decoding.
 lm_tag=           # Suffix to the result dir for language model training.
-lm_exp=           # Specify the directory path for LM experiment.
+lm_exp=kenlm_lrs3      # Specify the directory path for LM experiment.
                   # If this option is specified, lm_tag is ignored.
 lm_stats_dir=     # Specify the directory path for LM statistics.
 lm_config=        # Config for language model training.
@@ -131,7 +131,7 @@ use_streaming=false # Whether to use streaming decoding
 
 use_maskctc=false # Whether to use maskctc decoding
 
-batch_size=1
+batch_size=10
 inference_tag=    # Suffix to the result dir for decoding.
 inference_config= # Config for decoding.
 inference_args=   # Arguments for decoding, e.g., "--lm_weight 0.1".
@@ -147,9 +147,9 @@ inference_asr_model=valid.acc.ave.pth # ASR model path for decoding.
 download_model= # Download a model from Model Zoo and use it for decoding.
 
 # [Task dependent] Set the datadir name created by local/data.sh
-train_set=       # Name of training set.
-valid_set=       # Name of validation set used for monitoring/tuning network training.
-test_sets=       # Names of test sets. Multiple items (e.g., both dev and eval sets) can be specified.
+train_set=pretrain       # Name of training set.
+valid_set=trainval       # Name of validation set used for monitoring/tuning network training.
+test_sets=test       # Names of test sets. Multiple items (e.g., both dev and eval sets) can be specified.
 bpe_train_text=  # Text file path of bpe training set.
 lm_train_text=   # Text file path of language model training set.
 lm_dev_text=     # Text file path of language model development set.
